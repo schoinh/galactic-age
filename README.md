@@ -1,22 +1,44 @@
-# Bagheera's Pizzeria
+# Super Galactic Age Calculator
 
-#### _A web site for ordering pizza - June 21, 2019_
+#### _Determine your age and life expectancies based on different planets' solar years - June 28, 2019_
 
 #### _By **Na Hyung Choi**_
 
 ## Description
 
-On this web site, the user can choose toppings, crust, and a size for one or more pizzas, see the details of the order and the final cost, and "place an order."
+With this application, the user can input their date of birth and find out their age in Earth, Mercury, Venus, Mars, and Jupiter years. The user can also view how many years they have left to live on each planet, assuming average life expectancy for their demographic. If the user has already surpassed the average life expectancy, they can view how many years they have lived past their life expectancy.
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-| **Creates a new pizza through a constructor** | var pizza1 = new Pizza ("large", ["cheese", "sausage"]) | pizza1 = { size : "large", toppings: ["cheese", "sausage"], cost: undefined} |
+| **Returns user age in Earth years** | January 10, 1991 | 28 |
+| **Returns user age in Mercury years** | January 10, 1991 | 117 |
+| **Returns user age in Venus years** | January 10, 1991 | 45 |
+| **Returns user age in Mars years** | January 10, 1991 | 15 |
+| **Returns user age in Jupiter years** | January 10, 1991 | 2 |
+| **Determines user's average life expectancy on Earth** | Female | 82 |
+| **Determines user's average life expectancy on other planets** | Female | Mercury: 342<br/>Venus: 132<br/>Mars: 44<br/>Jupiter: 7 |
+| **Determines how many years user has left to live on each planet** | January 10, 1991, Female | Earth: 54<br/>Mercury: 225<br/>Venus: 87<br/>Mars: 29<br/>Jupiter: 5 |
+| **Determines number of years user has lived past life expectancy on each planet** | January 10, 1934, Female | Earth: 3<br/>Mercury: 12<br/>Venus: 5<br/>Mars: 1<br/>Jupiter: 0 |
+
+NOTE: Outputs are dependent on the date the application is run. The example outputs above are based on the build date of this application (June 28, 2019).
 
 ## Setup/Installation Requirements
 
-* Clone this repository and open the .html file.
-* OR go directly to the [Web page](http://schoinh.github.io/pizza)
+1. Clone this repository:
+    ```
+    $ git clone https://github.com/schoinh/galactic-age.git
+2. Install dependencies:
+    ```
+    $ npm install
+    ```
+3. Build distribution files:
+    ```
+    $ npm run build
+    ```
+4. Open the web page (dist/index.html)
+
+* OR go directly to the [Web page](http://schoinh.github.io/galactic-age)
 
 ## Known Bugs
 * No known bugs at this time.
@@ -25,6 +47,11 @@ On this web site, the user can choose toppings, crust, and a size for one or mor
 * JavaScript
 * jQuery
 * Bootstrap
+* Jasmine/Karma
+* ESLint
+* Babel
+* webpack
+* npm
 
 ## Support and contact details
 
