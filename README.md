@@ -28,6 +28,7 @@ NOTE: Outputs are dependent on the date the application is run. The example outp
 1. Clone this repository:
     ```
     $ git clone https://github.com/schoinh/galactic-age.git
+    ```
 2. Install dependencies:
     ```
     $ npm install
