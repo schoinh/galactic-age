@@ -18,4 +18,12 @@ describe('validate input and save as a Date object', function() {
     const newBirthday = newDate.makeBirthday(); 
     expect(newBirthday.getDate()).toEqual(10);
   });
-})
+});
+
+describe('calculate user age', function() {
+  const newDate = new inputDate(1991, 0, 10); 
+    
+  it('should calculate user age in Earth years', function() {  
+    expect(newDate.getAge()).toEqual(28);  
+  });
+});

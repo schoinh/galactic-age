@@ -45,4 +45,16 @@ export class inputDate {
   makeBirthday() {
     return new Date(this.year, this.month, this.day);
   }
+
+  getAge() {
+    const today = new Date();
+    const timeDiff = new Date(today - this.makeBirthday());
+    return Math.floor(timeDiff/3.154e10);
+  }
 }
+
+// export class userAge {
+//   constructor(earthYears) {
+//     this.earthYears = earthYears;
+//   }
+// }
