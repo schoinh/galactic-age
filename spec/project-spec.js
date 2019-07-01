@@ -16,6 +16,6 @@ describe('validate input and save as a Date object', function() {
   it('should save input birthday as a Date object', function() {
     const newDate = new inputDate(1991, 0, 10);
     const newBirthday = newDate.makeBirthday(); 
-    expect(newBirthday.getFullYear()).toEqual(1991);
+    expect(newBirthday.getDate()).toEqual(10);
   });
 })
