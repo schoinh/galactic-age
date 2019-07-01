@@ -11,6 +11,7 @@ With this application, the user can input their date of birth and find out their
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
+| **Gives error when input birthday is not valid** | April 31, 1991 | Please input a valid date. |
 | **Returns user age in Earth years** | January 10, 1991 | 28 |
 | **Returns user age in Mercury years** | January 10, 1991 | 117 |
 | **Returns user age in Venus years** | January 10, 1991 | 45 |
