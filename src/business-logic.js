@@ -53,12 +53,25 @@ export class inputDate {
   }
 }
 
-export class userAge {
-  constructor(earthYears) {
-    this.earthYears = earthYears;
-    this.mercuryYears = Math.floor(earthYears / .24);
-    this.venusYears = Math.floor(earthYears / .62);
-    this.marsYears = Math.floor(earthYears / 1.88);
-    this.jupiterYears = Math.floor(earthYears / 11.86);
+export class User {
+  constructor(earthAge) {
+    this.earthAge = earthAge;
+    this.mercuryAge = Math.floor(earthAge / .24);
+    this.venusAge = Math.floor(earthAge / .62);
+    this.marsAge = Math.floor(earthAge / 1.88);
+    this.jupiterAge = Math.floor(earthAge / 11.86);
+    this.earthLife;
+    this.mercuryLife;
+    this.venusLife;
+    this.marsLife;
+    this.jupiterLife;
+  }
+
+  getLifeExpectancy(gender) {
+    if (gender === "male") {
+      this.earthLife = 80;
+    } else {
+      this.earthLife = 82;
+    }
   }
 }

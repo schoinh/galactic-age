@@ -1,4 +1,4 @@
-import { inputDate, userAge } from './../src/business-logic';
+import { inputDate, User } from './../src/business-logic';
 
 describe('validate input and save as a Date object', function() {
   it('should validate date input', function() {
@@ -20,24 +20,32 @@ describe('validate input and save as a Date object', function() {
   });
 });
 
+const newDate = new inputDate(1991, 0, 10); 
+const earthAge = newDate.getAge();
+const newUser = new User(earthAge); 
+
 describe('calculate user age', function() {
-  const newDate = new inputDate(1991, 0, 10); 
-  const earthAge = newDate.getAge();
-  const newUserAge = new userAge(earthAge);
-
   it('should calculate user age in Earth years', function() {  
-    expect(newUserAge.earthYears).toEqual(28);  
+    expect(newUser.earthAge).toEqual(28);  
   });
 
-  it('should calculate user age in Mercury years', function() {  expect(newUserAge.mercuryYears).toEqual(116);  
+  it('should calculate user age in Mercury years', function() {  expect(newUser.mercuryAge).toEqual(116);  
   });
 
-  it('should calculate user age in Venus years', function() {  expect(newUserAge.venusYears).toEqual(45);  
+  it('should calculate user age in Venus years', function() {  expect(newUser.venusAge).toEqual(45);  
   });
 
-  it('should calculate user age in Mars years', function() {  expect(newUserAge.marsYears).toEqual(14); 
+  it('should calculate user age in Mars years', function() {  expect(newUser.marsAge).toEqual(14); 
   }); 
 
-  it('should calculate user age in Jupiter years', function() {  expect(newUserAge.jupiterYears).toEqual(2); 
+  it('should calculate user age in Jupiter years', function() {  expect(newUser.jupiterAge).toEqual(2); 
+  });
+}); 
+
+describe('determine how many years of life user has left', function() {
+  newUser.getLifeExpectancy("female"); 
+  
+  it('should determine user life expectancy on Earth', function() {   
+    expect(newUser.earthLife).toEqual(82); 
   });
 }); 
