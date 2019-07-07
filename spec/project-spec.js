@@ -31,4 +31,10 @@ describe('calculate user age', function() {
 
   it('should calculate user age in Mercury years', function() {  expect(newUserAge.mercuryYears).toEqual(116);  
   });
+
+  it('should calculate user age in Venus years', function() {  expect(newUserAge.venusYears).toEqual(45);  
+  });
+
+  it('should calculate user age in Mars years', function() {  expect(newUserAge.marsYears).toEqual(14); 
+  });
 }); 

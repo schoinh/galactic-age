@@ -15,7 +15,7 @@ With this application, the user can input their date of birth and find out their
 | **Returns user age in Earth years** | January 10, 1991 | 28 |
 | **Returns user age in Mercury years** | January 10, 1991 | 116 |
 | **Returns user age in Venus years** | January 10, 1991 | 45 |
-| **Returns user age in Mars years** | January 10, 1991 | 15 |
+| **Returns user age in Mars years** | January 10, 1991 | 14 |
 | **Returns user age in Jupiter years** | January 10, 1991 | 2 |
 | **Determines user's average life expectancy on Earth** | Female | 82 |
 | **Determines user's average life expectancy on other planets** | Female | Mercury: 342<br/>Venus: 132<br/>Mars: 44<br/>Jupiter: 7 |
