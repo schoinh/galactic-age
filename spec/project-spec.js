@@ -1,4 +1,4 @@
-import { inputDate } from './../src/business-logic';
+import { inputDate, userAge } from './../src/business-logic';
 
 describe('validate input and save as a Date object', function() {
   it('should validate date input', function() {
@@ -22,8 +22,13 @@ describe('validate input and save as a Date object', function() {
 
 describe('calculate user age', function() {
   const newDate = new inputDate(1991, 0, 10); 
-    
+  const earthAge = newDate.getAge();
+  const newUserAge = new userAge(earthAge);
+
   it('should calculate user age in Earth years', function() {  
-    expect(newDate.getAge()).toEqual(28);  
+    expect(newUserAge.earthYears).toEqual(28);  
   });
-});
+
+  it('should calculate user age in Mercury years', function() {  expect(newUserAge.mercuryYears).toEqual(116);  
+  });
+}); 

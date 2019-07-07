@@ -53,8 +53,9 @@ export class inputDate {
   }
 }
 
-// export class userAge {
-//   constructor(earthYears) {
-//     this.earthYears = earthYears;
-//   }
-// }
+export class userAge {
+  constructor(earthYears) {
+    this.earthYears = earthYears;
+    this.mercuryYears = Math.floor(earthYears / .24);
+  }
+}
