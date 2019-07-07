@@ -73,5 +73,19 @@ export class User {
     } else {
       this.earthLife = 82;
     }
+    this.mercuryLife = Math.round(this.earthLife / .24);
+    this.venusLife = Math.round(this.earthLife / .62);
+    this.marsLife = Math.round(this.earthLife / 1.88);
+    this.jupiterLife = Math.round(this.earthLife / 11.86);
+  }
+
+  getYearsLeft() {
+    this.yearsLeft = {
+      earth: Math.round(this.earthLife - this.earthAge),
+      mercury: Math.round(this.mercuryLife - this.mercuryAge),
+      venus: Math.round(this.venusLife - this.venusAge),
+      mars: Math.round(this.marsLife - this.marsAge),
+      jupiter: Math.round(this.jupiterLife - this.jupiterAge)
+    }
   }
 }

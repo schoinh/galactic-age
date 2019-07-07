@@ -46,6 +46,23 @@ describe('determine how many years of life user has left', function() {
   newUser.getLifeExpectancy("female"); 
   
   it('should determine user life expectancy on Earth', function() {   
-    expect(newUser.earthLife).toEqual(82); 
+    expect(newUser.earthLife).toEqual(82);
+  });
+
+  it('should determine user life expectancy on other planets', function() {  
+    expect(newUser.mercuryLife).toEqual(342);
+    expect(newUser.venusLife).toEqual(132);
+    expect(newUser.marsLife).toEqual(44);
+    expect(newUser.jupiterLife).toEqual(7); 
+  });
+
+  it('should determine expected years left to live on each planet', function() {  
+    newUser.getYearsLeft();
+
+    expect(newUser.yearsLeft.earth).toEqual(54);
+    expect(newUser.yearsLeft.mercury).toEqual(226);
+    expect(newUser.yearsLeft.venus).toEqual(87); 
+    expect(newUser.yearsLeft.mars).toEqual(30);
+    expect(newUser.yearsLeft.jupiter).toEqual(5); 
   });
 }); 
