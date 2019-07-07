@@ -59,5 +59,6 @@ export class userAge {
     this.mercuryYears = Math.floor(earthYears / .24);
     this.venusYears = Math.floor(earthYears / .62);
     this.marsYears = Math.floor(earthYears / 1.88);
+    this.jupiterYears = Math.floor(earthYears / 11.86);
   }
 }
