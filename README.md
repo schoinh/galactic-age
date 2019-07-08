@@ -6,7 +6,7 @@
 
 ## Description
 
-With this application, the user can input their date of birth and find out their age in Earth, Mercury, Venus, Mars, and Jupiter years. The user can also view how many years they have left to live on each planet, assuming average life expectancy for their demographic. If the user has already surpassed the average life expectancy, they can view how many years they have lived past their life expectancy.
+With this application, the user can input their date of birth and find out their age in Earth, Mercury, Venus, Mars, and Jupiter years. The user can also view how many years they have left to live on each planet, assuming average life expectancy for their demographic. If the user has already surpassed the average life expectancy, they can view how many years they have lived past their life expectancy. This application only accepts valid dates of birth (between January 1, 1000 and the current date) and will notify the user if the input date is invalid. The average life expectancy is based on gender (82 for females, 80 for males).
 
 ### Specs
 | Spec | Input | Output |
@@ -18,8 +18,7 @@ With this application, the user can input their date of birth and find out their
 | **Returns user age in Mars years** | January 10, 1991 | 14 |
 | **Returns user age in Jupiter years** | January 10, 1991 | 2 |
 | **Determines user's average life expectancy on Earth** | Female | 82 |
-| **Determines user's average life expectancy on other planets** | Female | Mercury: 342<br/>Venus: 132<br/>Mars: 44<br/>Jupiter: 7 |
-| **Determines how many years user has left to live on each planet** | January 10, 1991, Female | Earth: 54<br/>Mercury: 225<br/>Venus: 87<br/>Mars: 29<br/>Jupiter: 5 |
+| **Determines how many years user has left to live on each planet** | January 10, 1991, Female | Earth: 54<br/>Mercury: 226<br/>Venus: 87<br/>Mars: 30<br/>Jupiter: 5 |
 | **Determines number of years user has lived past life expectancy on each planet** | January 10, 1934, Female | Earth: 3<br/>Mercury: 12<br/>Venus: 5<br/>Mars: 1<br/>Jupiter: 0 |
 
 NOTE: Outputs are dependent on the date the application is run. The example outputs above are based on the build date of this application (June 28, 2019).
@@ -39,8 +38,6 @@ NOTE: Outputs are dependent on the date the application is run. The example outp
     $ npm run build
     ```
 4. Open the web page (dist/index.html)
-
-* OR go directly to the [Web page](http://schoinh.github.io/galactic-age)
 
 ## Known Bugs
 * No known bugs at this time.
