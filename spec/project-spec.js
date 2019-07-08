@@ -1,11 +1,11 @@
-import { inputDate, User } from './../src/business-logic';
+import { InputDate, User } from './../src/business-logic';
 
 describe('validate input and save as a Date object', function() {
   it('should validate date input', function() {
-    const invalidDate1 = new inputDate(2001, 1, 29);
-    const invalidDate2 = new inputDate(333, 0, 19);
-    const invalidDate3 = new inputDate(1991, 3, 31);
-    const validDate = new inputDate(1991, 0, 10);
+    const invalidDate1 = new InputDate(2001, 1, 29);
+    const invalidDate2 = new InputDate(333, 0, 19);
+    const invalidDate3 = new InputDate(1991, 3, 31);
+    const validDate = new InputDate(1991, 0, 10);
     
     expect(invalidDate1.validate()).toEqual(false);
     expect(invalidDate2.validate()).toEqual(false);
@@ -14,13 +14,13 @@ describe('validate input and save as a Date object', function() {
   });
   
   it('should save input birthday as a Date object', function() {
-    const newDate = new inputDate(1991, 0, 10);
+    const newDate = new InputDate(1991, 0, 10);
     const newBirthday = newDate.makeBirthday(); 
     expect(newBirthday.getDate()).toEqual(10);
   });
 });
 
-const newDate = new inputDate(1991, 0, 10); 
+const newDate = new InputDate(1991, 0, 10); 
 const earthAge = newDate.getAge();
 const newUser = new User(earthAge); 
 

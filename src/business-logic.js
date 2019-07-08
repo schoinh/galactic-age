@@ -1,4 +1,4 @@
-export class inputDate {
+export class InputDate {
   constructor(year, month, day) {
     this.year = year;
     this.month = month;
