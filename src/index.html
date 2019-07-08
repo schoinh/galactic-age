@@ -6,9 +6,10 @@
   <body>
     <div class="container">
       <h1>Super Galactic Age Calculator</h1>
-      <h5>Enter your birthday to find out fascinating galactic truths about yourself!</h5>
+      <h6>Enter your birthday and gender to find out fascinating galactic truths about yourself!</h6>
       <hr>
-      <select class="form-control" id="month">
+      <form>
+        <select class="form-control" id="month">
           <option value="0">January</option>
           <option value="1">February</option>
           <option value="2">March</option>
@@ -28,12 +29,14 @@
         <div class="form-group">
           <input type="number" class="form-control" id="year" placeholder="Year">
         </div>
+        <select class="form-control" id="gender">
+          <option value="female">Female</option>
+          <option value="male">Male</option>
+        </select>
         <br><br>
         <button type="submit" class="btn btn-primary">Show Me!</button>
       </form>
-      <div class="showErrors"></div>
-      <div class="showArtistId"></div>
-      <div class="showArtistAlbums"></div>
+      <div class="output"></div>
     </div>
   </body>
 </html>
