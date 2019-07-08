@@ -19,16 +19,17 @@ const displayYearsLeft = function (lifeExpectancy, earthYears, mercuryYears, ven
 $(function() {
   $('form').submit(function(event) {
     event.preventDefault();
+    debugger;
     $('.outputAges, .outputYearsLeft').empty();
 
-    const inputYear = $('#year').val();
-    const inputMonth = $('#month').val();
-    const inputDay = $('#day').val();
+    const inputYear = parseInt($('#year').val());
+    const inputMonth = parseInt($('#month').val());
+    const inputDay = parseInt($('#day').val());
     const inputGender = $('#gender').val();
 
     const newDate = new InputDate(inputYear, inputMonth, inputDay);
 
-    if (newDate.validate() === false) {
+    if (newDate.validate() === false || newDate.getAge() < 0) {
       $('.outputAges').text('Please enter a valid date of birth.');
     } else {
       const earthAge = newDate.getAge();
