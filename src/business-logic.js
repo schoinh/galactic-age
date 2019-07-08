@@ -60,11 +60,6 @@ export class User {
     this.venusAge = Math.floor(earthAge / .62);
     this.marsAge = Math.floor(earthAge / 1.88);
     this.jupiterAge = Math.floor(earthAge / 11.86);
-    this.earthLife;
-    this.mercuryLife;
-    this.venusLife;
-    this.marsLife;
-    this.jupiterLife;
   }
 
   getLifeExpectancy(gender) {
@@ -81,11 +76,11 @@ export class User {
 
   getYearsLeft() {
     this.yearsLeft = {
-      earth: Math.round(this.earthLife - this.earthAge),
-      mercury: Math.round(this.mercuryLife - this.mercuryAge),
-      venus: Math.round(this.venusLife - this.venusAge),
-      mars: Math.round(this.marsLife - this.marsAge),
-      jupiter: Math.round(this.jupiterLife - this.jupiterAge)
+      earth: Math.floor(this.earthLife - this.earthAge),
+      mercury: Math.floor(this.mercuryLife - this.mercuryAge),
+      venus: Math.floor(this.venusLife - this.venusAge),
+      mars: Math.floor(this.marsLife - this.marsAge),
+      jupiter: Math.floor(this.jupiterLife - this.jupiterAge)
     }
   }
 }

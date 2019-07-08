@@ -61,8 +61,8 @@ describe('determine how many years of life user has left', function() {
 
     expect(newUser.yearsLeft.earth).toEqual(54);
     expect(newUser.yearsLeft.mercury).toEqual(226);
-    expect(newUser.yearsLeft.venus).toEqual(87); 
+    expect(newUser.yearsLeft.venus).toEqual(87);
     expect(newUser.yearsLeft.mars).toEqual(30);
     expect(newUser.yearsLeft.jupiter).toEqual(5); 
-  });
+  }); 
 }); 
