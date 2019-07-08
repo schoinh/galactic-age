@@ -6,7 +6,7 @@
 
 ## Description
 
-With this application, the user can input their date of birth and find out their age in Earth, Mercury, Venus, Mars, and Jupiter years. The user can also view how many years they have left to live on each planet, assuming average life expectancy for their demographic. If the user has already surpassed the average life expectancy, they can view how many years they have lived past their life expectancy. This application only accepts valid dates of birth (between January 1, 1000 and the current date) and will notify the user if the input date is invalid. The average life expectancy is based on gender (82 for females, 80 for males).
+With this application, the user can input their date of birth and find out their age in Earth, Mercury, Venus, Mars, and Jupiter years. The user can also view how many years they have left to live on each planet, assuming average life expectancy for their demographic. If the user has already surpassed the average life expectancy, they can view how many years they have lived past their life expectancy. This application only accepts valid dates of birth (between January 1, 1000 and the date that the application is run) and will notify the user if the input date is invalid. The average life expectancy is based on gender (82 for females, 80 for males).
 
 ### Specs
 | Spec | Input | Output |
