@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### _Determine your age and life expectancies based on different planets' solar years - June 28, 2019_
+#### _Determine your age and life expectancies based on different planets' solar years - July 7, 2019_
 
 #### _By **Na Hyung Choi**_
 
@@ -21,7 +21,7 @@ With this application, the user can input their date of birth and find out their
 | **Determines how many years user has left to live on each planet** | January 10, 1991, Female | Earth: 54<br/>Mercury: 226<br/>Venus: 87<br/>Mars: 30<br/>Jupiter: 5 |
 | **Determines number of years user has lived past life expectancy on each planet** | January 10, 1934, Female | Earth: 3<br/>Mercury: 12<br/>Venus: 5<br/>Mars: 1<br/>Jupiter: 0 |
 
-NOTE: Outputs are dependent on the date the application is run. The example outputs above are based on the build date of this application (June 28, 2019).
+NOTE: Outputs are dependent on the date the application is run. The example outputs above are based on the build date of this application (July 7, 2019).
 
 ## Setup/Installation Requirements
 
