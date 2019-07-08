@@ -12,7 +12,7 @@ const displayYearsLeft = function (lifeExpectancy, earthYears, mercuryYears, ven
   if (earthYears >= 0) {
     $('.outputYearsLeft').html(`Based on your gender, the average life expectancy for your demographic is ${lifeExpectancy} years. Based on this life expectancy, you have ${earthYears} years left on Earth.<br><br>Years left on Mercury: ${mercuryYears}<br>Years left on Venus: ${venusYears}<br>Years left on Mars: ${marsYears}<br>Years left on Jupiter: ${jupiterYears}`);
   } else {
-    $('.outputYearsLeft').html(`Based on your gender, the average life expectancy for your demographic is ${lifeExpectancy} years. Based on this life expectancy, you have lived ${earthYears} years EXTRA on Earth.<br><br>Years lived EXTRA on Mercury: ${mercuryYears}<br>Years lived EXTRA on Venus: ${venusYears}<br>Years lived EXTRA on Mars: ${marsYears}<br>Years lived EXTRA on Jupiter: ${jupiterYears}`);
+    $('.outputYearsLeft').html(`Based on your gender, the average life expectancy for your demographic is ${lifeExpectancy} years. Based on this life expectancy, you have lived ${Math.abs(earthYears)} years EXTRA on Earth.<br><br>Years lived EXTRA on Mercury: ${Math.abs(mercuryYears)}<br>Years lived EXTRA on Venus: ${Math.abs(venusYears)}<br>Years lived EXTRA on Mars: ${Math.abs(marsYears)}<br>Years lived EXTRA on Jupiter: ${Math.abs(jupiterYears)}`);
   }
 }
 
@@ -37,8 +37,6 @@ $(function() {
       newUser.getYearsLeft();
       displayAges(newUser.earthAge, newUser.mercuryAge, newUser.venusAge, newUser.marsAge, newUser.jupiterAge);
       displayYearsLeft(newUser.earthLife, newUser.yearsLeft.earth, newUser.yearsLeft.mercury,newUser.yearsLeft.venus,newUser.yearsLeft.mars,newUser.yearsLeft.jupiter);
-      $('form')[0].reset();
     }
-
   });
 });
